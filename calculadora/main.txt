@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class main{
+
+  public static void main(String[] args){
+    
+    Scanner sc = new Scanner(System.in);  
+    int numero1, numero2, resultado;
+    byte opcion;
+    numero1 = 0;
+    numero2 = 0;
+    resultado = 0;
+    opcion = 0;
+    
+    System.out.println("1 suma \n 2 resta \n 3 multiplicar \n 4 dividir");
+   System.out.println("Digite opcion:");
+   
+    opcion = sc.nextByte();
+    
+    System.out.println("Digite numero 1:");
+     numero1 = sc.nextInt();
+
+    System.out.println("Digite numero 2:");
+     numero2 = sc.nextInt();
+     
+    switch(opcion){
+      case 1:
+          resultado = numero1 + numero2
+        break;
+      case 2:
+          resultado = numero1 - numero2
+        break;
+      case 3:
+          resultado = numero1 * numero2
+        break;
+      case 4:
+          resultado = numero1 / numero2
+        break;
+       default:
+         System.out.println("Opcion no valida!!!")
+         break;
+    } //switch
+    
+   
+  }//void
+
+}//class

@@ -1,0 +1,80 @@
+import java.util.Scanner;
+public class Parking{
+
+  public static void Menu(){
+        System.out.println("Menu:");        
+        System.out.println("---------------------------");        
+        System.out.printf("|%5s|%10s|%5s|\n", "a", "bicicleta", "1000");
+        System.out.printf("|%5s|%10s|%5s|\n", "b", "Motocicleta", "2000");
+        System.out.printf("|%5s|%10s|%5s|\n", "c", "Automovil", "3000");
+        System.out.println("---------------------------");          
+  }
+
+  public static void main(String [] args){
+  //variables & constantes:
+  Scanner teclado = new Scanner(System.in);   
+  short total_jornada = 0;
+  byte horas_vehiculo = 0;
+  short cobrar_vehiculo = 0;
+  char tipo_vehiculo = ' ';
+  boolean estado = true;
+  short bici = 0;
+  byte moto = 0;
+  byte auto = 0;
+  final short BICI = 1000;
+  final short MOTO = 2000;
+  final short AUTO = 3000;
+  
+  while(estado){
+      menu();
+
+       //Entradas:
+       System.out.print("Digite opcion");
+       tipo_vehiculo =  teclado.next().charAt(0);
+       System.out.print("Digite la cantidad horas");       
+       horas_vehiculo =  teclado.nextByte();
+       
+       //Proceso:
+       switch(tipo_vehiculo){
+         case 'a':
+           cobrar_vehiculo = horas_vehiculo *  BICI;
+           bici =+1;
+           total_jornada = total_jornada + cobrar_vehiculo;
+           
+           System.out.println("Debe pagar el usuario: "+cobrar_vehiculo);
+           break;
+          case 'b':
+           cobrar_vehiculo = horas_vehiculo *  MOTO;
+           moto =+1;
+           total_jornada = total_jornada + cobrar_vehiculo;
+           System.out.println("Debe pagar el usuario: "+cobrar_vehiculo);          
+            break;
+           case 'c':
+           cobrar_vehiculo = horas_vehiculo *  AUTO;
+           auto =+1;
+           total_jornada = total_jornada + cobrar_vehiculo;
+                      System.out.println("Debe pagar el usuario: "+cobrar_vehiculo);
+             break; 
+           default:
+             System.out.println("Caso desconocido!!!");
+       }///sw
+       
+       System.out.println("Digite z para salir");
+       tipo_vehiculo = teclado.next.chartAt(0);
+       if(tipo_vehiculo=='z'){
+         estado = false;
+       }//if
+       
+
+       
+  }// while
+  
+  
+      //salidas:
+           System.out.println("Total jornada"+ total_jornada);
+           System.out.println("Total Bici"+ bici);
+           System.out.println("Total moto"+ moto);
+           System.out.println("Total auto"+ auto);                                   
+
+  }
+} 

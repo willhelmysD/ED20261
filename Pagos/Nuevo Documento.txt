@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class ProacudiDos{
+
+    public static void main(String[] args) {
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        double valorFactura;
+        double descuento = 0;
+        double valorFinal;
+        int estrato;
+        
+        System.out.println("Ingrese el valor de la factura de electricidad:");
+        valorFactura = entrada.nextDouble();
+        
+        System.out.println("Ingrese el estrato del usuario:");
+        estrato = entrada.nextInt();
+        
+        // Condición para aplicar descuento
+        if (estrato == 1 || estrato == 2) {
+            descuento = valorFactura * 0.25;
+        }
+        
+        valorFinal = valorFactura - descuento;
+        
+        System.out.println("Valor original de la factura: " + valorFactura);
+        System.out.println("Valor del descuento aplicado: " + descuento);
+        System.out.println("Valor final a pagar: " + valorFinal);
+        
+        entrada.close();
+    }
+}
+

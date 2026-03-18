@@ -1,0 +1,26 @@
+
+public class Main{//pascal case   
+  public static void autorApp(){//camelCase
+    System.out.println("By will0");
+  }
+
+  public static void main(String [] args){
+    //
+    float total_pagar, sub_total, salud, pension;//snake_case
+    
+    total_pagar = 0;
+    sub_total = 0;
+    salud = 0;
+    pension = 0;
+    
+    byte dias = 0;
+    char opcion = '';
+    final byte MANANA = 20;
+    final byte TARDE = 25;
+    final byte NOCHE = 40;
+    final float PEN = 0.1f;
+    final float SAL = 0.8f;
+    
+    autor();
+  }
+}

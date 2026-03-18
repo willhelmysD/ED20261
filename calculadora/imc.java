@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class imc{
+
+  public static void main(String[] args){
+  
+    Scanner sc = new Scanner(System.in);
+    float altura = 0;
+    float peso = 0;
+    float imc =   0;
+    boolean estado = true;
+    byte salir = 0;
+    
+    while(estado){
+      System.out.println("Digite su altura:");
+      altura = sc.nextFloat();
+      System.out.println("Digite su peso:");
+      peso = sc.nextFloat();
+      imc =  peso/(altura * altura);      
+       System.out.println("Su imc es:" + imc) ; 
+      System.out.println("Digite 1 para salir") ;  
+      salir = sc.nextByte();
+      if(salir==1){
+        estado = false;
+      }
+    
+    }
+   
+  }//void
+}//class
