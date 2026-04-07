@@ -20,8 +20,12 @@ public class ED_vector {
         float propina = 0f;
         byte dias = 0;
         float venta_dia = 0f;
+        float venta = 0f;
+        boolean turno;
+        float prom = 0f;
         float valor_total = 0f;        
         float [] arreglo_venta;
+        byte op = 0;
         
         System.out.println("¿Cuantos dias vas a calcular?");
         dias = sc.nextByte();
@@ -30,8 +34,24 @@ public class ED_vector {
         
         for(int i = 0; i<dias; i++){
             
-            System.out.println("Digite el valor del dia:"+(i+1));    
-            venta_dia = sc.nextFloat();
+            System.out.println("Digite los  valores del dia:"+(i+1));    
+            turno = true;
+            int  cont = 0;
+            while(turno){
+                cont = 0;
+                System.out.println("Digite la venta");        
+                venta = sc.nextFloat();
+                venta_dia = venta_dia + venta;
+                cont++;
+                System.out.println("deseas terminar el tunno");        
+                
+                if(op == 1){
+                    turno = false;
+                }
+            }
+            prom = venta_dia / cont;
+             System.out.println("el promedio del dia fue: "+prom);      
+            //venta_dia = sc.nextFloat();
             arreglo_venta[i] = venta_dia;            
         }
         
