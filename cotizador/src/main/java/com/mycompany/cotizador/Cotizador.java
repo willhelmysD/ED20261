@@ -32,6 +32,8 @@ public class Cotizador {
             new Cotizacion("pared","arena","metro",50f,3f),
         };
         
+        //
+        
         System.out.println("Digite base");
         base = sc.nextFloat();
         System.out.println("Digite altura");
@@ -49,6 +51,7 @@ public class Cotizador {
                 System.out.println("costo por arena"+(lista[2].getCantidad() * area) * lista[2].getValor_unidad() );
                 System.out.println(total);
                 break;
+                
         }
         
         
